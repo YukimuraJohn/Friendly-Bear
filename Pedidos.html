@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amigo Urso</title>
+
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Rubik&display=swap" rel="stylesheet">
+  
+  <script src="./script.js"></script>
+</head>
+
+<body>
+  <header class="head_top">
+    <a class="logo_bottom_line" href="./AmigoUrso.html">
+      <img class="logo" src="./Imagens/AmigoUrso_topo.png" alt="Logo Amigo Urso">
+    </a>
+  </header>
+
+  <main>
+    <nav class="menu">
+      <ul>
+        <li><a href="./AmigoUrso.html" target="_blank">Apresentação</a></li>
+        <li><a href="./Demel.html" target="_blank">Mistura de Mel </a></li>
+        <li><a href="./Dabel.html" target="_blank">Direto da Abelha</a></li>
+        <li><a href="./Pedidos.html" target="_blank">Pedidos</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <div class="divCompras">
+        <h4>Compras</h4>
+        <form action="" method="POST" name="form">
+          <div>
+            <fieldset>
+              <legend>Identificação</legend>
+              <label class="colPri" for="nome">Nome:</label>
+              <input class="inpGrande" type="text" name="nome"> <br>
+              <label class="colPri" for="email">E-mail:</label>
+              <input class="inpGrande" type="text" name="email">
+              <label class="colPri" for="Ender">Endereço:</label> <br>
+              <textarea class="inpEnder" name="Ender"></textarea>
+              <fieldset class="fsDir">
+                <legend>Gênero:</legend>
+                <label><input type="radio" name="Sexo" value="M" checked />Mas</label>
+                <label><input type="radio" name="Sexo" value="F" />Fem</label>
+                <label><input type="radio" name="Sexo" value="O" />Outro</label>
+              </fieldset>
+              <fieldset class="fsDir">
+                <legend>Nascimento:</legend>
+                <input class="numDD" type="number" min="1" max="31" name="dia"> /
+                <input class="numDD" type="number" min="1" max="12" name="mes"> /
+                <input class="numQD" type="number" min="1945" max="2010" name="ano">
+              </fieldset>
+              <label class="colPri" for="Telef" title>Telefone:</label>
+              <input class="inpTelef" type="number + text" name="Fixo" onChange="Valida(this, 8);" required> <br>
+              <label class="colPri" for="Cel">Celular:</label>
+              <input class="inpTelef" type="number + text" name="Celular" onChange="Valida(this, 9);">
+            </fieldset>
+            <fieldset>
+              <legend>Seleção de Produtos e Pagamento</legend>
+              <label for="selProduto" class="colLabSelProd">
+                <select class="colSelProd" name="selProduto" id="selProduto">
+                  <option>-----</option>
+                  <optgroup label="Iogurte">
+                    <option value="NatMel">Natural com Mel </option>
+                    <option value="ZerLac">Zero Lactose </option>
+                  </optgroup>
+                  <optgroup label="Balas">
+                    <option value="GenMel">Gengibre e Mel </option>
+                    <option value="MelAni">Mel e Anis </option>
+                  </optgroup>
+                  <optgroup label="Barra de Cereal">
+                    <option value="MelGra">Mel e Granola </option>
+                  </optgroup>
+                  <optgroup label="Pote de Mel">
+                    <option value="MelFSil">Mel Flores Silvestres </option>
+                    <option value="MelEuca">Mel de Eucalipto </option>
+                    <option value="MelFLar">Mel Flor de Laranjeira </option>
+                  </optgroup>
+                  <optgroup label="Própolis">
+                    <option value="Extra">Extrato </option>
+                    <option value="Spray">Spray </option>
+                  </optgroup>
+                </select>
+                <input class="elemDir" type="button" value="Comprar" onClick="Compra( this.form.selProduto );">
+              </label>
+              <textarea class="listaCompras" name="listaPedidos" readonly></textarea>
+              <fieldset class="fsEsq">
+                <legend>Cartão</legend>
+                <div class="divMarg">
+                  <label class="colPriCompras">Bandeira:</label>
+                  <label><input type="radio" name="RBand" checked>Visa</label>
+                  <label><input type="radio" name="RBand">Master</label>
+                  <label><input type="radio" name="RBand">Elo</label>
+                </div>
+                <div class="divMarg">
+                  <label class="colPriCompras" for="mesVal">Validade:</label>
+                  <input class="numDD" type="number" name="MesVal" id="mesVal" min="1" max="12" value="10"> /
+                  <input class="numQD" type="number" name="AnoVal" id="anoVal" min="2021" max="2030" value="2021">
+                </div>
+                <div class="divMarg">
+                  <label class="colPriCompras" for="numCar">Número:</label>
+                  <input class="inpNCC" type="text" name="NumCard" id="numCar">
+                </div>
+              </fieldset>
+              <label class="elemDir" for="VTotal">Valor R$
+                <input class="inpMedio" type="text" name="TxtTotal" readonly id="TxtTotal" value="0">
+              </label>
+            </fieldset>
+            <div class="botoes">
+              <input type="submit" value="Enviar">
+              <input type="reset" value="Limpar">
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <address class="top_footer">
+      Rua Apis Mellifera, 1 <br>
+      Tel: (21) 91122-3344 <br>
+      <a href="mailto:contato@zangao.com.br">contato@zangao.com.br</a>
+    </address>
+  </footer>
+  
+</body>
+
+</html>

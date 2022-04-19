@@ -1,0 +1,390 @@
+body {
+  color: var(--text-color);
+  font-size: var(--title-font-size);
+  font-family: var(--text-font);
+  background-color: #FF5555;
+}
+
+header.head_top {
+  display: block;
+  margin-bottom: 1px;
+}
+
+header .logo {
+  margin: 8px 0px 8px 10px;
+  /* border-bottom: solid 3px #FFDD00;
+  padding-bottom: 5px; */
+}
+
+:root {
+  /* Color */
+  --text-color: #FFDD22;
+  --link: #FFDD00;
+  --visited-link: #FFBB00;
+
+  /* Fonts */
+  --title-font-size: 1.125rem;
+  --subtitle-font-size: 0.875rem;
+
+  --text-font: 'Lato', georgia, serif;
+  --menu-font: 'Rubik', verdana, liberation;
+  --menu-font2: 'Rubik', verdana, sans-serif;
+}
+
+.logo_bottom_line {
+  position: relative;
+}
+
+/* Using a Pseudo Element to do the divider */
+.logo_bottom_line::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 250px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--text-color);
+  margin-left: 10px;
+  margin-bottom: 3px;
+  border-radius: 3px;
+}
+
+address.top_footer {
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  font-family: 'Lato', serif;
+  color: var(--text-color);
+  line-height: 140%;
+}
+
+.top_footer a{
+  color: var(--link);
+  text-decoration: none;
+}
+
+nav.menu {
+  display: block;
+  width: 26%;
+  float: left;
+
+  margin-top: 20px;
+  margin-right: 10px;
+  font-weight: bold;
+  font-family: var(--menu-font);
+}
+
+.menu a{
+  color: var(--link);
+  text-decoration: none;
+}
+
+.menu a:visited {
+  color: var(--visited-link);
+}
+
+.menu ul{
+  line-height: 230%;
+  color: var(--text-color);
+  margin-top: 20%;
+  list-style-type: disc;
+}
+
+div.apres {
+  display: block;
+  width: 70%;
+  float: right;
+
+  margin-top: 5%;
+  text-align: center;
+  font-size: var(--title-font-size);
+  font-family: var(--text-font);
+}
+
+/* DEMEL */
+
+.listaComMel#itens {
+  width: 340px;
+  font-size: var(--title-font-size);
+  display: inline-block;
+  background-color:#EECC88;
+  border: 2px solid #000055;
+  padding: 10px 10px 10px 50px;
+  font-family: var(--menu-font2);
+}
+
+.listaComMel ol.roman {
+  list-style-type: upper-roman;
+  text-align: left;
+  background-color: #EECC88;
+  margin: 0px auto 10px;
+  padding: 0;
+}
+
+ol.roman li {
+  background-color:#EECC88;
+  margin: 10px 0;
+  color: #886666;
+  /* font-weight: bold; */
+}
+
+/* PLUS ++ */
+ol.roman li a {
+  text-decoration: none;
+  color: #AA0000;
+  /* font-weight: bold; */
+}
+
+/*  Style New Jan */
+.listaComMel#itensJan {
+  width: 300px;
+  height: auto;
+  text-align: center;
+  background-color: #EECC88;
+  color: #AA0000;
+  padding-bottom: 20px;
+  border: 2px solid #000055;
+  font-family:var(--menu-font2) ;
+}
+
+.listaComMel div.janInfoImg {
+  text-align: center;
+  margin: 0 30px;
+  border: 2px solid #000055;
+  background-color: white;
+  padding: 15px 0;
+}
+
+.listaComMel div.janInfoDet {
+  text-align: left;
+  margin: 0.6rem 1.6rem;
+  font-size: var(--title-font-size) ;
+}
+
+.listaComMel .janInfoDet p.pInfoDet{
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: var(--menu-font2);
+  color: #EE0000;
+}
+
+.listaComMel div.buttonF,
+.listaComMel form.buttonF{
+  margin: 0;
+}
+
+.listaComMel input.buttonF {
+  border: 1px solid #000055;
+  border-radius: 3px;
+}
+
+/* Finishing the style New Jan */
+
+/* OLD CSS */
+/* .listaComMel ul.quad {
+  list-style-type: square;
+  background-color:#EECC88;
+  margin: 10px 0;
+} */
+
+/* span.real {
+  font-weight: bold;
+  vertical-align: middle;
+  color: #EE0000;
+  background-color: #EECC88;
+} */
+
+
+/* DABEL */
+
+.tabDaBel#daBel {
+  border-collapse: collapse;
+  border: 2px solid;
+  margin: 40px auto 10px;
+  background-color: #FFCC44;
+  color: #000066;
+  font-family:var(--menu-font);
+}
+
+.tabDaBel td, th {
+  height: 40px;
+  border: 3px solid #226699;
+  padding: 6px 12px;
+  /* text-align: center; */   /* cool too */
+  color: #EE0000;
+}
+
+/*  Container  */
+.tabDaBel td.container {
+  text-align: center;
+  /* vertical-align: top; */
+  background-color: #FFFFFF;
+  color: #226699;
+}
+
+.tabDaBel .tab_Title {
+  color: #FFFF00;
+  background-color: #228855;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.tabDaBel .linTH th {
+  color: #FFFFFF;
+  background-color: #22AA55;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.tabDaBel .colTH {
+  color: #FFFFFF;
+  background-color: #2299DD;
+  text-align: left;
+}
+
+.tabDaBel .imgDaBel#imgDes {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #226699;
+  padding: 2px;
+  background-color: #FFFFFF;
+}
+
+.tabDaBel td a {
+  text-decoration: none;
+  color: #EE0000;
+}
+
+.tabDaBel .container .pReal {
+  font-weight: bold;
+  vertical-align: middle;
+  color: #EE0000;
+}
+
+/*  PEDIDOS    */
+
+.divCompras {
+  width: 550px;
+  color: #2255AA;
+  background-color: #EEEEAA;
+  padding: 6px 6px 15px 6px;
+  font-size: 14px;
+  margin: 40px auto 20px;
+  margin-left: 26%;
+  border: 2px solid #77CCDD;
+}
+
+/* .divLinha {
+  width: 500px;
+  margin-bottom: 6px;
+} */
+
+.colPri {
+  width: 90px;
+  display: block;
+  float: left;
+}
+
+/* Value input element size */
+.inpGrande {
+  width: 380px;
+  margin-bottom: 10px;
+}
+
+.inpEnder {
+  width: 180px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.inpTelef {
+  width: 100px;      /* layout 90px */
+  margin-bottom: 10px;
+}
+
+/* Use for Date */
+.numDD {
+  width: 30px;    /* 2 digits */
+  border: 2px inset;       /* layout apart */
+  border-radius: 5px;
+}
+
+.numQD{
+  width: 50px;    /* 4 digits */
+  border: 2px inset;       /* layout apart */
+  border-radius: 5px;
+}
+
+/* Fieldset right */
+.fsDir { 
+  display: inline;
+  float: right;
+  margin: 0;
+}
+/* Fieldset left */
+.fsEsq { 
+  display: inline;
+  float: left;
+  margin: 0;
+}
+
+/* Column Select Product */
+.colLabSelProd {
+  width: 270px;
+  height: 40px;
+  float: left;
+}
+/* Size Select Product */
+.colSelProd {
+  width: 200px;
+  float: left;
+  height: 1.3rem;
+}
+
+/* Element button floating right  */
+.elemDir {
+  display: block;
+  float: right;
+}
+
+/* Shopping List */
+.listaCompras {
+  width: 210px;
+  height: 160px;
+  margin: 2px 0 0 10px;
+  float: right;
+}
+/* Inside Field Card */
+.colPriCompras {
+  width: 60px;
+  display: block;
+  float: left;
+}
+
+/* Following Figure 5 / Style apart */
+.divMarg {
+  margin-bottom: 12px;     
+}
+
+/* width Number Card */
+.inpNCC {
+  width: 130px;
+}
+
+.inpMedio {
+  width: 80px;
+}
+
+/* div Margin Top Style Apart */
+label.elemDir {
+  margin-top: 15px;
+}
+
+.botoes {
+  text-align: right;
+  margin: 20px 10px 0 10px;
+}
